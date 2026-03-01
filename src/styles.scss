@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@use "tailwindcss";
+
+/* PrimeNG Modern Aura Theme and Icons */
+@import "primeicons/primeicons.css";
+
+/* Global Reset for clean margins */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: #f8f9fa;
+    /* Light yard background */
+}
