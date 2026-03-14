@@ -1,0 +1,45 @@
+<div class="flex h-full w-full items-center justify-center pt-20">
+    <div
+        class="w-full max-w-md p-8 space-y-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 transition-colors duration-300">
+
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white transition-colors">ModuleYard</h2>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 transition-colors">Secure Admin Access</p>
+        </div>
+
+        <form class="mt-8 space-y-6" (ngSubmit)="onSubmit()">
+
+            <div>
+                <label for="email"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors">Email
+                    address</label>
+                <div class="mt-1">
+                    <input id="email" name="email" type="email" required autocomplete="username" [(ngModel)]="email"
+                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors"
+                        placeholder="admin@moduleyard.com">
+                </div>
+            </div>
+
+            <div>
+                <label for="totpCode"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors">Authenticator
+                    Code</label>
+                <div class="mt-1">
+                    <input id="totpCode" name="totpCode" type="text" required maxlength="6" autocomplete="one-time-code"
+                        [(ngModel)]="totpCode"
+                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-center tracking-widest font-mono text-lg text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors"
+                        placeholder="000000">
+                </div>
+            </div>
+
+            <div class="pt-2">
+                <button pButton type="submit"
+                    class="w-full flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-all shadow-sm border-none">
+                    <i class="pi pi-shield"></i>
+                    <span>Verify & Login</span>
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>

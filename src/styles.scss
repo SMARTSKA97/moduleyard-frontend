@@ -1,0 +1,6 @@
+@import "tailwindcss" layer(tailwindcss);
+@layer primeng;
+@import "primeicons/primeicons.css";
+
+/* Tell Tailwind v4 to apply 'dark:' classes when .my-app-dark is active */
+@custom-variant dark (&:where(.app-dark, .app-dark *));
